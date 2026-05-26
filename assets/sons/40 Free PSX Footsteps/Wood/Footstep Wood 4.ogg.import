@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://1kxjxjhy15ge"
+path="res://.godot/imported/Footstep Wood 4.ogg-de95c765639c153e7ed59e16b3b53459.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/sons/40 Free PSX Footsteps/Wood/Footstep Wood 4.ogg"
+dest_files=["res://.godot/imported/Footstep Wood 4.ogg-de95c765639c153e7ed59e16b3b53459.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://60tw1in0k43n"
+path="res://.godot/imported/Menu Enferrujado.mp3-e1eeaa66b2f72bab55b35d505883cef7.mp3str"
+
+[deps]
+
+source_file="res://assets/sons/Menu Enferrujado.mp3"
+dest_files=["res://.godot/imported/Menu Enferrujado.mp3-e1eeaa66b2f72bab55b35d505883cef7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

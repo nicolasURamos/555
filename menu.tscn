@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://cx00rqqd66c8k"]
+
+[ext_resource type="Script" uid="uid://dss80oeb5qemy" path="res://menu.gd" id="1_lti8b"]
+[ext_resource type="Texture2D" uid="uid://cj5ydehy2exgr" path="res://assets/555.png" id="2_ouk20"]
+[ext_resource type="AudioStream" uid="uid://60tw1in0k43n" path="res://assets/sons/Menu Enferrujado.mp3" id="3_mae5d"]
+
+[node name="MenuPrincipal" type="Control" unique_id=628252860]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lti8b")
+metadata/_edit_lock_ = true
+
+[node name="fundo" type="TextureRect" parent="." unique_id=1899046803]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ouk20")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1535956100]
+layout_mode = 0
+offset_left = 209.0
+offset_top = 157.0
+offset_right = 314.0
+offset_bottom = 223.0
+
+[node name="acordar" type="Button" parent="VBoxContainer" unique_id=1554856818]
+layout_mode = 2
+text = "acordar"
+
+[node name="dormir" type="Button" parent="VBoxContainer" unique_id=759399072]
+layout_mode = 2
+text = "dormir"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1008414960]
+stream = ExtResource("3_mae5d")
+volume_db = -4.763
+autoplay = true

@@ -1,0 +1,157 @@
+[gd_scene format=3 uid="uid://bxmsfhugakcw7"]
+
+[ext_resource type="Script" uid="uid://bdsed4pty2d8n" path="res://player.gd" id="1_4flbx"]
+[ext_resource type="Shader" uid="uid://drgyiemxyqf2m" path="res://player.gdshader" id="2_onrkg"]
+[ext_resource type="FontFile" uid="uid://isxwtboqchlo" path="res://assets/font/MGS1 Codec.ttf" id="3_i3pqv"]
+[ext_resource type="AudioStream" uid="uid://dcvks5odlo1l8" path="res://assets/sons/40 Free PSX Footsteps/Gravel/Footstep Gravel 2.ogg" id="4_hqtel"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_onrkg"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i3pqv"]
+shader = ExtResource("2_onrkg")
+shader_parameter/color_depth = 32.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_onrkg"]
+font = ExtResource("3_i3pqv")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_onrkg"]
+bg_color = Color(0.0051132306, 0.31632885, 4.813075e-08, 1)
+
+[node name="Player" type="CharacterBody3D" unique_id=670624368]
+script = ExtResource("1_4flbx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=36952315]
+shape = SubResource("CapsuleShape3D_onrkg")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=580346899]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.625947, 0)
+current = true
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Camera3D" unique_id=1625772350]
+light_color = Color(0.621077, 0.44090515, 0.99990326, 1)
+light_energy = 4.0
+spot_range = 10.73
+spot_angle = 35.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=524280643]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1637428539]
+material = SubResource("ShaderMaterial_i3pqv")
+anchors_preset = -1
+anchor_right = 0.871875
+anchor_bottom = 0.82916665
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label_Timer" type="Label" parent="CanvasLayer" unique_id=453927577]
+offset_left = 134.0
+offset_right = 172.0
+offset_bottom = 23.0
+text = "5:00"
+horizontal_alignment = 1
+
+[node name="TelaGameOver" type="Control" parent="CanvasLayer" unique_id=1392620482]
+process_mode = 3
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/TelaGameOver" unique_id=607847165]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.47058824)
+
+[node name="Label" type="Label" parent="CanvasLayer/TelaGameOver" unique_id=1252061226]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 72.0
+offset_right = 248.0
+offset_bottom = 95.0
+text = "O EXPEDIENTE ACABOU"
+label_settings = SubResource("LabelSettings_onrkg")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Btn_Restart" type="Button" parent="CanvasLayer/TelaGameOver" unique_id=805150314]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 99.0
+offset_right = 206.0
+offset_bottom = 130.0
+text = "recomeçar"
+
+[node name="Btn_Menu" type="Button" parent="CanvasLayer/TelaGameOver" unique_id=833292516]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 137.0
+offset_right = 189.0
+offset_bottom = 168.0
+text = "menu"
+
+[node name="BarraStamina" type="ProgressBar" parent="CanvasLayer" unique_id=161814737]
+offset_left = 99.0
+offset_top = 231.0
+offset_right = 229.0
+offset_bottom = 238.0
+theme_override_styles/background = SubResource("StyleBoxFlat_onrkg")
+max_value = 10.0
+value = 10.0
+show_percentage = false
+
+[node name="Label_EPIs" type="Label" parent="CanvasLayer" unique_id=1694064297]
+offset_top = 225.00002
+offset_right = 65.0
+offset_bottom = 248.00002
+scale = Vector2(0.75, 0.75)
+text = "EPIs: 0/3"
+
+[node name="TelaVitoria" type="Control" parent="CanvasLayer" unique_id=925056287]
+process_mode = 3
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/TelaVitoria" unique_id=1038193719]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.17254902, 0, 0.40392157, 0.2784314)
+
+[node name="Label" type="Label" parent="CanvasLayer/TelaVitoria" unique_id=1636011928]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 88.0
+offset_right = 292.0
+offset_bottom = 111.0
+text = "VOCÊ SOBREVIVEU AO EXPEDIENTE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Btn_ReiniciarVitoria" type="Button" parent="CanvasLayer/TelaVitoria" unique_id=688503234]
+layout_mode = 0
+offset_left = 119.0
+offset_top = 131.0
+offset_right = 195.0
+offset_bottom = 162.0
+text = "Reiniciar"
+
+[node name="SomPassos" type="AudioStreamPlayer" parent="." unique_id=1334309936]
+stream = ExtResource("4_hqtel")
+volume_db = -10.32
+pitch_scale = 0.54

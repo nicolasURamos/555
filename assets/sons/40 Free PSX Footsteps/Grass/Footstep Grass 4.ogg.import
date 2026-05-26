@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://desom7hdgf3g7"
+path="res://.godot/imported/Footstep Grass 4.ogg-24123bcf250a507cdba272dccabed9d2.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/sons/40 Free PSX Footsteps/Grass/Footstep Grass 4.ogg"
+dest_files=["res://.godot/imported/Footstep Grass 4.ogg-24123bcf250a507cdba272dccabed9d2.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

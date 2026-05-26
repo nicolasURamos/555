@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cfuqq6j4nep55"
+path="res://.godot/imported/Footstep Dirt 1.ogg-64c92e2ee18e3ade9fcc5d8fb2680220.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/sons/40 Free PSX Footsteps/Dirt/Footstep Dirt 1.ogg"
+dest_files=["res://.godot/imported/Footstep Dirt 1.ogg-64c92e2ee18e3ade9fcc5d8fb2680220.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

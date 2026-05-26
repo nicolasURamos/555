@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://3s8wgxgndr0l"]
+
+[sub_resource type="Environment" id="Environment_i4ibt"]
+background_mode = 1
+background_color = Color(0.083579354, 5.599712e-06, 0.08149501, 1)
+background_energy_multiplier = 0.2
+ambient_light_color = Color(0.08235294, 0, 0.08235294, 1)
+ambient_light_energy = 0.5
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0.041296855, 2.6396708e-06, 0.04129622, 1)
+fog_density = 1.0
+fog_depth_begin = 5.0
+fog_depth_end = 25.0
+
+[node name="Node3D" type="Node3D" unique_id=1770663164]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1712148291]
+environment = SubResource("Environment_i4ibt")

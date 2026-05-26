@@ -1,0 +1,15 @@
+AnimationPlayer
+ColorRect
+AudioStreamPlayer3D
+AudioStreamPlayer
+TextureRect
+Button
+VBoxContainer
+NavigationRegion3D
+NavigationAgent3D
+CollisionShape3D
+CharacterBody3D
+Area3D
+MeshInstance3D
+StaticBody3D
+Label

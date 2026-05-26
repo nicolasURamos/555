@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://e1u1xpubmq20"]
+
+[ext_resource type="Script" uid="uid://cgcbqgd8pxgc8" path="res://epi_coletavel.gd" id="1_mpk1b"]
+[ext_resource type="PackedScene" uid="uid://sucopov5d6vh" path="res://assets/epis/case_low.glb" id="2_tcscv"]
+[ext_resource type="AudioStream" uid="uid://0yoavcodkpln" path="res://assets/sons/Collectable_08.wav" id="3_h64r3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4y11a"]
+size = Vector3(0.7156105, 0.37190628, 0.90234375)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tcscv"]
+transparency = 1
+blend_mode = 1
+albedo_color = Color(0.12156863, 0.20392157, 1, 0.5019608)
+emission_enabled = true
+emission = Color(0.12156863, 0.20392157, 1, 1)
+emission_energy_multiplier = 1.26
+
+[node name="epi_coletavel" type="Area3D" unique_id=240456791]
+script = ExtResource("1_mpk1b")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=962761446]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.018346786, 0.118932724, 0.048828125)
+shape = SubResource("BoxShape3D_4y11a")
+
+[node name="case_low2" parent="." unique_id=1891766453 instance=ExtResource("2_tcscv")]
+
+[node name="EfeitoBrilho" parent="." unique_id=2094229670 instance=ExtResource("2_tcscv")]
+transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, 0, 0, 0)
+
+[node name="case_low" parent="EfeitoBrilho" index="0" unique_id=2024886971]
+material_override = SubResource("StandardMaterial3D_tcscv")
+
+[node name="casedeco_low" parent="EfeitoBrilho/case_low" index="0" unique_id=674312829]
+material_override = SubResource("StandardMaterial3D_tcscv")
+
+[node name="casehandle_low" parent="EfeitoBrilho/case_low" index="1" unique_id=1314203893]
+material_override = SubResource("StandardMaterial3D_tcscv")
+
+[node name="caseop_low" parent="EfeitoBrilho/case_low" index="2" unique_id=1269605749]
+material_override = SubResource("StandardMaterial3D_tcscv")
+
+[node name="caseop_low_001" parent="EfeitoBrilho/case_low" index="3" unique_id=975899854]
+material_override = SubResource("StandardMaterial3D_tcscv")
+
+[node name="caseup_low" parent="EfeitoBrilho/case_low" index="4" unique_id=1546157550]
+material_override = SubResource("StandardMaterial3D_tcscv")
+
+[node name="SomColeta" type="AudioStreamPlayer3D" parent="." unique_id=279890305]
+stream = ExtResource("3_h64r3")
+max_distance = 5.0
+
+[editable path="case_low2"]
+[editable path="EfeitoBrilho"]
